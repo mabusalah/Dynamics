@@ -37,7 +37,7 @@ if __name__ == '__main__':
         "mobilephone": "12345678"
     }
     # Add contact to Dataverse
-    add_contact(contact_data, crm_url, access_token)
+    dynamics.add_contact(contact_data, crm_url, access_token)
 
     # Update contracts
     update_data = {
