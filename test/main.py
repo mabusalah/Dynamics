@@ -1,5 +1,5 @@
 # This is to test the library.
-import dynamics
+from module import dynamics
 
 if __name__ == '__main__':
     # Replace these variables with your actual values
@@ -7,7 +7,6 @@ if __name__ == '__main__':
     client_id = 'client_id'
     client_secret = 'client_secret'
     tenant_name = 'tenant_name'
-
     crm_url = f"https://{tenant_name}.crm4.dynamics.com/"
 
     # Create Access Token

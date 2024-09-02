@@ -81,9 +81,9 @@ def add_contact(contact, env_url, access_token):
     try:
         response = requests.post(api_url, headers=headers, data=json.dumps(contact))
         response.raise_for_status()  # Raise an exception for non-200 status codes
-        print("Contact created successfully")
+        return "Contact created successfully"
     except requests.exceptions.RequestException as e:
-        print("Error creating contact:", e)
+        return "Error creating contact:", e
         # Add more specific error handling based on response status code or error message
 
 # Update Contacts in Dynamics
@@ -107,6 +107,6 @@ def update_contact(access_token, contact_id, update_data, env_url):
     }
     try:
         response = requests.patch(api_url, headers=headers, data=json.dumps(update_data))
-        print("Contact updated successfully")
+        return "Contact updated successfully"
     except requests.exceptions.RequestException as e:
-        print("Error updating contact:", e)
+        return "Error updating contact:", e
