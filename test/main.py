@@ -1,5 +1,5 @@
 # This is to test the library.
-from dynamics import dynamics
+from dynamics import contacts
 
 if __name__ == '__main__':
     # Replace these variables with your actual values

@@ -5,10 +5,9 @@ This library provides a set of functions to interact with Microsoft Dataverse (f
 
 ## Installation
 
-To use this library, you need to have `requests` and `json` modules installed. You can install `requests` and `json` using pip:
+To use this library, you need to have `requests` and `json` modules installed. You can install `requests` using pip:
 ```sh
 pip install requests
-pip install json
 ```
 Now you need to install the Dynamics library:
 ```sh
