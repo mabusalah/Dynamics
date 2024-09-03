@@ -11,7 +11,7 @@ pip install requests
 ```
 Now you need to install the Dynamics library:
 ```sh
-pip install dynamics
+pip install dynamicscontacts
 ```
 ## Usage
 Import the library
