@@ -1,4 +1,4 @@
-# Dynamics Dataverse API Library
+# Dynamics Dataverse API Library - Contact Management
 Dynamics Customer Insights - Journeys - Dataverse
 
 This library provides a set of functions to interact with Microsoft Dataverse (formerly known as Common Data Service) using the Dynamics 365 REST API. It includes functionalities for authentication, searching contacts, adding contacts, and updating contacts.

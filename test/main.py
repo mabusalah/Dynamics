@@ -1,5 +1,5 @@
 # This is to test the library.
-from module import dynamics
+from dynamics import dynamics
 
 if __name__ == '__main__':
     # Replace these variables with your actual values
