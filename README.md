@@ -44,7 +44,7 @@ This function searches for a contact in Dataverse based on the provided search c
     }
     # You may customize the returned fields here
     return_fields = "firstname,lastname,emailaddress1,mobilephone"
-    contacts = contacts.search_contacts(crm_url, access_token, search_params, return_fields)
+    crm_contacts = contacts.search_contacts(crm_url, access_token, search_params, return_fields)
     print(contacts)
 ```
 ## Add Contact to Dynamics
@@ -58,7 +58,7 @@ This function adds a new contact to Dataverse.
         "mobilephone": "12345678"
     }
     # Add contact to Dataverse
-    add_contact = contacts.add_contact(contact_data, crm_url, access_token)
+    add_crm_contact = contacts.add_contact(contact_data, crm_url, access_token)
 ```
 If you want to know the fields that you can add to Dynamics, please check this [reference](https://learn.microsoft.com/es-es/power-apps/developer/data-platform/webapi/reference/contact?view=dataverse-latest&viewFallbackFrom=dynamics-ce-odata-9).
 ## Update Contacts in Dynamics
@@ -70,7 +70,7 @@ This function updates an existing contact in Dataverse based on the provided con
         "lastname": "lname"
     }
     contact_id= "contactid"
-    updated_contact = contacts.update_contact(access_token, contact_id, update_data, crm_url)
+    updated_crm_contact = contacts.update_contact(access_token, contact_id, update_data, crm_url)
 ```
 ## Contributing
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.

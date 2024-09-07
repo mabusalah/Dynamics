@@ -19,7 +19,7 @@ if __name__ == '__main__':
         "emailaddress1": "email"
     }
     return_fields = "firstname,lastname,emailaddress1,mobilephone"
-    contacts = contacts.search_contacts(crm_url, access_token, search_params, return_fields)
+    crm_contacts = contacts.search_contacts(crm_url, access_token, search_params, return_fields)
     print(contacts)
 
     """ 
@@ -36,7 +36,7 @@ if __name__ == '__main__':
         "mobilephone": "12345678"
     }
     # Add contact to Dataverse
-    add_contact = contacts.add_contact(contact_data, crm_url, access_token)
+    add_crm_contact = contacts.add_contact(contact_data, crm_url, access_token)
 
     # Update contracts
     update_data = {
@@ -44,4 +44,4 @@ if __name__ == '__main__':
         "lastname": "lname"
     }
     contact_id= "contactid"
-    updated_contact = contacts.update_contact(access_token, contact_id, update_data, crm_url)
+    updated_crm_contact = contacts.update_contact(access_token, contact_id, update_data, crm_url)
