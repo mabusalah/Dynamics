@@ -72,6 +72,17 @@ This function updates an existing contact in Dataverse based on the provided con
     contact_id= "contactid"
     updated_crm_contact = contacts.update_contact(access_token, contact_id, update_data, crm_url)
 ```
+## Delete Contacts in Dynamics
+This function Deletes an existing contact in Dataverse based on the provided contact ID. You need to make sure that you have the proper permissions and that there are not dependent records connected to this contact.
+```python
+    contact_id = ''  # Replace with the actual contact ID
+
+    deleted = contacts.delete_contact(crm_url, access_token, contact_id)
+    if deleted:
+        print("Contact deleted successfully")
+    else:
+        print("Error deleting contact")
+```
 ## Contributing
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
 
