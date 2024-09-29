@@ -48,7 +48,7 @@ if __name__ == '__main__':
 
     # Delete Contact
 
-    contact_id = ''  # Replace with the actual contact ID
+    contact_id = ''  # Replace with the actual contact ID.
 
     deleted = contacts.delete_contact(crm_url, access_token, contact_id)
     if deleted:

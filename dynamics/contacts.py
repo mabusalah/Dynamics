@@ -134,7 +134,7 @@ def delete_contact(env_url, access_token, contact_id):
 
     try:
         response = requests.delete(api_url, headers=headers)
-        response.raise_for_status()  # Raise an exception for non-200 status codes
+        response.raise_for_status()  # Raise an exception for non-200 status codes.
 
         return True
     except requests.exceptions.RequestException as e:
