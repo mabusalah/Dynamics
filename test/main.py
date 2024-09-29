@@ -14,16 +14,16 @@ if __name__ == '__main__':
 
     # Search for a contact
     search_params = {
-        "firstname": "fname",
-        "lastname": "lname",
-        "emailaddress1": "email"
+        "firstname": "Mustafa",
+        "lastname": "Abusalah",
+        "emailaddress1": "ma.abusalah@gmail.com"
     }
     return_fields = "firstname,lastname,emailaddress1,mobilephone"
     crm_contacts = contacts.search_contacts(crm_url, access_token, search_params, return_fields)
-    print(contacts)
+    print(crm_contacts)
 
     """ 
-    Create normal patient profile
+    Create new contact normal profile
     Contact data that you want to add, feel free to add whatever data you have.
     You may find on the below link Dataverse Dynamics Contact default fields:
     https://learn.microsoft.com/es-es/power-apps/developer/data-platform/webapi/reference/contact?view=dataverse-latest&viewFallbackFrom=dynamics-ce-odata-9
@@ -43,5 +43,15 @@ if __name__ == '__main__':
         "firstname": "fname",
         "lastname": "lname"
     }
-    contact_id= "contactid"
+    contact_id= '' # Replace with the actual contact ID
     updated_crm_contact = contacts.update_contact(access_token, contact_id, update_data, crm_url)
+
+    # Delete Contact
+
+    contact_id = ''  # Replace with the actual contact ID
+
+    deleted = contacts.delete_contact(crm_url, access_token, contact_id)
+    if deleted:
+        print("Contact deleted successfully")
+    else:
+        print("Error deleting contact")

@@ -110,3 +110,34 @@ def update_contact(access_token, contact_id, update_data, env_url):
         return "Contact updated successfully"
     except requests.exceptions.RequestException as e:
         return "Error updating contact:", e
+
+# Delete Contacts in Dynamics
+def delete_contact(env_url, access_token, contact_id):
+    """
+    Deletes a contact in Dynamics 365 based on the provided contact ID.
+
+    Args:
+        env_url (str): The URL of your Dynamics 365 environment.
+        access_token (str): The authentication token for accessing Dataverse.
+        contact_id (str): The GUID of the contact to delete.
+
+    Returns:
+        True if the contact was deleted successfully, False otherwise.
+    """
+
+    api_url = f"{env_url}/api/data/v9.2/contacts({contact_id})"
+
+    headers = {
+        "Authorization": f"Bearer {access_token}",
+        "Content-Type": "application/json"
+    }
+
+    try:
+        response = requests.delete(api_url, headers=headers)
+        response.raise_for_status()  # Raise an exception for non-200 status codes
+
+        return True
+    except requests.exceptions.RequestException as e:
+        print(f"Error deleting contact: {e}")
+        return False
+
